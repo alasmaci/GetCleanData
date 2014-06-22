@@ -10,7 +10,7 @@ The experiments were carried out with a group of 30 volunteers. Each person perf
 
 A 561-feature vector with time and frequency domain variables was derived from the data.The vector included a number of estimated variable including Mean value and Standard deviation.
 
-Each record included its activity label and subject identifier. In the data set provided features had been normalized and bounded within [-1,1] so that further data transformations were not required.
+Each record included its activity label and subject identifier. In the data set provided features had been normalized and bounded within [-1,1] so that further data transformations were not required. It should be noted that normalized data are dimensionless so that the values have no units of measurement.
 
 Work performed on the provided data
 -------------------------------------------
