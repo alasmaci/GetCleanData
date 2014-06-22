@@ -1,6 +1,11 @@
 
 Human Activity Recognition Using Smartphones 
 ========================================================
+Ensure that the packages "data.table" and "reshape2" are loaded
+
+Make data directory "./UCI_Dataset" and ensure that the following files are in the data directory:
+
+X_test.txt, X_train.txt, y_test.txt, y_train.txt, subject_test.txt, subject_train.txt, features.txt
 
 Read and combine data from test set and from training set:
 
@@ -74,10 +79,12 @@ names(allX2) <- gsub("\\-", ".", names(allX2))
 
 allX2$activity <- as.factor(allX2$activity)
 levels(allX2$activity) <- c("WALKING","WALKING_UPSTAIRS","WALKING_DOWNSTAIRS","SITTING","STANDING","LAYING")
-
-```
 allX2$subject <- as.factor(allX2$subject)
+```
+**allX2** is now the final data frame
 
+Part 2 - create data frame for upload and submission
+-----------------------------------------------------
 Create summary of averages of variables
 
 ```{r}
@@ -86,3 +93,4 @@ allMelt <- melt(allX2,id = c("activity", "subject"),measure.vars= names(allX2[1:
 DataSum <- dcast(allMelt, activity + subject ~ variable,mean)
 
 ```
+**DataSum** is the submission file
