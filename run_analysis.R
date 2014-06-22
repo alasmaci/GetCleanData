@@ -44,7 +44,10 @@ names(allX2) <- gsub("\\-", ".", names(allX2))
 allX2$activity <- as.factor(allX2$activity)
 levels(allX2$activity) <- c("WALKING","WALKING_UPSTAIRS","WALKING_DOWNSTAIRS","SITTING","STANDING","LAYING")
 allX2$subject <- as.factor(allX2$subject)
-
+# allX2 is now the final data frame
+########################################
+# Now, make a data frame to upload and submit
 # create summary of averages of variables
 allMelt <- melt(allX2,id = c("activity", "subject"),measure.vars= names(allX2[1:79]))
 DataSum <- dcast(allMelt, activity + subject ~ variable,mean)
+# DataSum has been submitted
