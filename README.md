@@ -1,6 +1,6 @@
 
-Human Activity Recognition Using Smartphones 
-========================================================
+Notes on run_analysis 
+----------------------------
 Ensure that the packages "data.table" and "reshape2" are loaded
 
 Make data directory "./UCI_Dataset" and ensure that the following files are in the data directory:
